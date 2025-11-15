@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definitions -->
+    
+    <bean id="student" class="com.app.bean.Student" lazy-init="true">
+        <!-- Setter Injection 
+        <property name="sid" value="10" />
+        <property name="sname" value="sachin" />
+        <property name="sage" value="18" />
+        -->
+        
+         <!--Constructor Injection-->
+    		<constructor-arg name="sid" value="18"/>
+    		<constructor-arg name="sname" value="kohli"/>
+    		<constructor-arg name="sage" value="37"/>
+    </bean>
+    
+    
+</beans>
